@@ -372,7 +372,7 @@ public class ConsolaOlimpicos
 		
 		String nombreAtleta = input("Por favor ingrese el nombre del atleta a consultar");
 		String pais = calculadora.PaisAtleta(nombreAtleta);
-		System.out.println("El atelta " + nombreAtleta + " pertenece al pais" + pais);
+		System.out.println("El atelta " + nombreAtleta + " pertenece al pais " + pais);
 	}
 	/**
 	 * Este método le pide al usuario el nombre de un archivo con información de los
