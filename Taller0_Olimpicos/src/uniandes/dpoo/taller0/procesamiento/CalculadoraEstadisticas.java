@@ -443,5 +443,20 @@ public class CalculadoraEstadisticas
 
 		return nombres;
 	}
-
+	
+	public String PaisAtleta(String nombreAtleta)
+	{
+		Atleta Atleta_buscado = buscarAtleta(nombreAtleta);
+		if (Atleta_buscado != null)
+		{
+			Pais darpais = Atleta_buscado.darPais();
+			return darpais.darNombre();
+		}
+		else
+		{
+			return "El atleta no existe";
+		}
+	}
 }
+
+

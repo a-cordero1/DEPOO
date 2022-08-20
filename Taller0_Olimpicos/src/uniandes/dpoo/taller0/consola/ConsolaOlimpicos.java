@@ -62,7 +62,9 @@ public class ConsolaOlimpicos
 					ejecutarMedallistasPorNacionYGenero();
 				else if (opcion_seleccionada == 12 && calculadora != null)
 					ejecutarPorcentajeMedallistas();
-				else if (opcion_seleccionada == 13)
+				else if (opcion_seleccionada == 13 && calculadora != null)
+					ejecutarPaisAtleta();
+				else if (opcion_seleccionada == 14)
 				{
 					System.out.println("Saliendo de la aplicación ...");
 					continuar = false;
@@ -102,7 +104,8 @@ public class ConsolaOlimpicos
 		System.out.println("10. Consultar el atleta todoterreno");
 		System.out.println("11. Consultar los medallistas por país y género");
 		System.out.println("12. Consultar el porcentaje de atletas que son medallistas");
-		System.out.println("13. Salir de la aplicación\n");
+		System.out.println("13. Consultar el pais de un atleta");
+		System.out.println("14. Salir de la aplicación\n");
 	}
 
 	/**
@@ -362,7 +365,15 @@ public class ConsolaOlimpicos
 			System.out.println(deporte + ": " + atletas.get(deporte).size() + " atletas");
 		}
 	}
-
+	
+	private void ejecutarPaisAtleta()
+	{
+		System.out.println("\n" + "Pais de un atleta" + "\n");
+		
+		String nombreAtleta = input("Por favor ingrese el nombre del atleta a consultar");
+		String pais = calculadora.PaisAtleta(nombreAtleta);
+		System.out.println("El atelta " + nombreAtleta + " pertenece al pais" + pais);
+	}
 	/**
 	 * Este método le pide al usuario el nombre de un archivo con información de los
 	 * atletas, lo carga usando la clase LoaderOlimpicos y crea un objeto de tipo
@@ -396,7 +407,7 @@ public class ConsolaOlimpicos
 		}
 
 	}
-
+	
 	/**
 	 * Este método sirve para imprimir un mensaje en la consola pidiéndole
 	 * información al usuario y luego leer lo que escriba el usuario.
